@@ -19,7 +19,8 @@ declare NGINX_SERVER_PORT="80" #
 declare -A CACHE="${ROOT}cache/"
 declare -A BUILD="${ROOT}build/" 
 
-declare -A VERSION=(['luajit']='2.0.4' ['nginx']='1.11.8' ['pcre']='8.40' ['zlib']='1.2.11' ['openssl']='1.1.0c')
+declare -A VERSION=(['luajit']=${LUAJIT_VERSION:-2.0.5} ['nginx']=${NGINX_VERSION:-1.13.6} ['pcre']=${PCRE_VERSION:-8.41} ['zlib']=${ZLIB_VERSION:-1.2.11} ['openssl']=${OPENSSL_VERSION:-1.1.0g})
+
 # ./configure default settings
 #declare -A DEFAULT_CONFIGURE_PARAMS="--with-debug "
 declare -A DEFAULT_CONFIGURE_PARAMS=" "

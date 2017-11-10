@@ -24,6 +24,18 @@ This installer is for ```Ubuntu 16.04```
 ## Configs
 _Paths and install locations are set in `config.sh`_
 
+You can define some configuration as environment variables:
+
+```
+export LUAJIT_VERSION=2.0.5
+export NGINX_VERSION=1.13.6
+export PCRE_VERSION=8.41
+export ZLIB_VERSION=1.2.11
+export OPENSSL_VERSION=1.1.0g
+
+export NGINX_EXTRA_MODULES="ngx_vts ngx_http_user_agent"
+```
+
 ## Install 
 
 ``` 
