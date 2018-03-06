@@ -143,7 +143,7 @@ NGINX_MODULES['lua_resty_upload']="https://github.com/openresty/lua-resty-upload
 # [lua-nginx-osm]="https://github.com/miurahr/lua-nginx-osm" #- OpenStreetMap extension for Nginx Lua module. 
 # [nginx-tcp-lua-module]="https://github.com/bigplum/nginx-tcp-lua-module" #- A TCP server with lua supporting based on nginx.
 # [nginx-google-oauth]="https://github.com/agoragames/nginx-google-oauth" #- Lua module to add Google OAuth to nginx. 
-[lua-upstream-nginx-module]="https://github.com/openresty/lua-upstream-nginx-module/zipball/master" #- Nginx C module to expose Lua API to ngx_lua for Nginx upstreams.
+[lua-upstream-nginx-module]="https://github.com/openresty/lua-upstream-nginx-module" #- Nginx C module to expose Lua API to ngx_lua for Nginx upstreams.
 # [lua-resty-lock]="https://github.com/openresty/lua-resty-lock" #- Simple nonblocking lock API for ngx_lua based on shared memory dictionaries. 
 
 
