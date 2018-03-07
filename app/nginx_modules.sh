@@ -41,7 +41,7 @@ NGINX_MODULES['ngx_postgres']="https://github.com/FRiCKLE/ngx_postgres/zipball/m
 NGINX_MODULES['ngx_couchbase']="https://github.com/couchbaselabs/couchbase-nginx-module/zipball/master" #- The module for nginx webserver to access Couchbase Server. 
 NGINX_MODULES['ngx_aws_auth']="https://github.com/anomalizer/ngx_aws_auth/zipball/master" #- nginx module to proxy to authenticated AWS services.
 NGINX_MODULES['ngx_zeromq']="https://github.com/FRiCKLE/ngx_zeromq" #- ZeroMQ transport for nginx. 
-NGINX_MODULES['ngx_auth_ldap']="https://github.com/kvspb/nginx-auth-ldap/zipball/master" #- LDAP authentication module for nginx. 
+NGINX_MODULES['ngx_auth_ldap']="https://github.com/kvspb/nginx-auth-ldap" #- LDAP authentication module for nginx. 
 
 # Friewall
 NGINX_MODULES['ngx_naxsi']="https://github.com/nbs-system/naxsi/zipball/master" #- NAXSI is an open-source, high performance, low rules maintenance WAF for NGINX. 
