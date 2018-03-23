@@ -45,7 +45,7 @@ declare DISTRO_VERSION=$(lsb_release -sr)
 DEFAULT_CONFIGURE_PARAMS+="--prefix=${NGINX_PATH} "
 DEFAULT_CONFIGURE_PARAMS+="--sbin-path=${NGINX_SBIN_PATH} --pid-path=${NGINX_PID_PATH} "
 DEFAULT_CONFIGURE_PARAMS+="--conf-path=${NGINX_CONFIG_PATH} "
-DEFAULT_CONFIGURE_PARAMS+="--error-log-path=${NGINX_ERRORLOG_PATH} -http-log-path=${NGINX_ACCESSLOG_PATH} "
+DEFAULT_CONFIGURE_PARAMS+="--error-log-path=${NGINX_ERRORLOG_PATH} --http-log-path=${NGINX_ACCESSLOG_PATH} "
 DEFAULT_CONFIGURE_PARAMS+="--user=www-data "
 DEFAULT_CONFIGURE_PARAMS+="--with-pcre=../pcre --with-zlib=../zlib "
 DEFAULT_CONFIGURE_PARAMS+="--with-http_realip_module  --with-http_gzip_static_module --with-stream "
