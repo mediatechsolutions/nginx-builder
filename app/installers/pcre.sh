@@ -18,6 +18,7 @@ MAIN_DIR="pcre"
 WORKDIR="${BUILD}${MAIN_DIR}/"
 CACHEDIR="${CACHE}${MAIN_DIR}/"
 FILENAME="${MAIN_DIR}-${1}.tar.gz"
+DOWNLOAD_URL="https://sourceforge.net/projects/pcre/files/pcre/${1}/${FILENAME}/download"
 # Clear: current install
 rm -Rf ${WORKDIR} && mkdir -p ${WORKDIR}
 
@@ -30,7 +31,7 @@ run_install "${MAIN_DIR}-${1}:: equired by NGINX Core and Rewrite modules and pr
 
 if [ ! -s "${CACHE}${FILENAME}" ] ; then
         run_download "${FILENAME}"
-        wget -O ${CACHE}${FILENAME} wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/${FILENAME} &> /dev/null
+        wget -O ${CACHE}${FILENAME} ${DOWNLOAD_URL} &> /dev/null
     else
         show_yellow "Cache" "found ${FILENAME}. Using from cache" 
 fi
