@@ -17,6 +17,8 @@ if [ -z ${BUILD+x} ]; then show_red "Error" "BUILD system variable is not set! C
 MAIN_DIR="luajit/"
 WORKDIR="${CACHE}${MAIN_DIR}"  
 FILENAME="LuaJIT-${1}.tar.gz"
+DOWNLOAD_URL="https://github.com/openresty/luajit2/archive/v${1}.tar.gz"
+
 # Clear: current install
 if [ -d "${WORKDIR}" ] ; then
     rm -Rf ${WORKDIR}
@@ -34,7 +36,7 @@ luajit -v >/dev/null 2>&1 || {
 
     if [ ! -s "${CACHE}${FILENAME}" ] ; then
             run_download "${FILENAME}"
-            wget -O ${CACHE}${FILENAME} http://luajit.org/download/${FILENAME} &> /dev/null
+            wget -O ${CACHE}${FILENAME} ${DOWNLOAD_URL} &> /dev/null
         else
             show_yellow "Cache" "found ${CACHE}LuaJIT-${1}.tar.gz. Using from cache" 
     fi
