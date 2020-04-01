@@ -89,6 +89,7 @@ NGINX_MODULES['lua_resty_rabbitmqstomp']="https://github.com/wingify/lua-resty-r
 NGINX_MODULES['lua_resty_gearman']="https://github.com/zhhchen/lua-resty-gearman/zipball/master" #- Lua gearman client driver for the ngx_lua based on the cosocket API.
 NGINX_MODULES['lua_resty_fastcgi']="https://github.com/benagricola/lua-resty-fastcgi/zipball/master" #- Lua FCGI client driver for ngx_lua based on the cosocket API. 
 NGINX_MODULES['lua_resty_upload']="https://github.com/openresty/lua-resty-upload/zipball/master" #- Streaming reader and parser for http file uploading based on ngx_lua cosocket.
+NGINX_MODULES['lua_resty_openidc']="https://github.com/rfrancotechnologies/nginx-builder/zipball/master" #- Streaming reader and parser for http file uploading based on ngx_lua cosocket.
 
 
 
