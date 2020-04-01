@@ -24,7 +24,7 @@ declare NGINX_PID_PATH=${NGINX_PID_PATH:-${NGINX_PATH}/logs/nginx.pid}
 declare -A CACHE="${ROOT}cache/"
 declare -A BUILD="${ROOT}build/" 
 
-declare -A VERSION=(['luajit']=${LUAJIT_VERSION:-2.0.5} ['nginx']=${NGINX_VERSION:-1.13.6} ['pcre']=${PCRE_VERSION:-8.41} ['zlib']=${ZLIB_VERSION:-1.2.11} ['openssl']=${OPENSSL_VERSION:-1.1.0g})
+declare -A VERSION=(['luajit']=${LUAJIT_VERSION:-2.0.5} ['nginx']=${NGINX_VERSION:-1.13.6} ['pcre']=${PCRE_VERSION:-8.41} ['zlib']=${ZLIB_VERSION:-1.2.11} ['openssl']=${OPENSSL_VERSION:-1.1.1d})
 
 # ./configure default settings
 #declare -A DEFAULT_CONFIGURE_PARAMS="--with-debug "
