@@ -1,7 +1,7 @@
 #!/bin/bash
 
 . config.sh
-. app/colors.sh 
+. app/colors.sh
 
 # run as root only
 if [[ $EUID -ne 0 ]] ; then
@@ -15,7 +15,7 @@ if [ -z ${BUILD+x} ]; then show_red "Error" "BUILD system variable is not set! C
 
 # Set: vars
 MAIN_DIR="luajit/"
-WORKDIR="${CACHE}${MAIN_DIR}"  
+WORKDIR="${CACHE}${MAIN_DIR}"
 FILENAME="LuaJIT-${1}.tar.gz"
 DOWNLOAD_URL="https://github.com/openresty/luajit2/archive/v${1}.tar.gz"
 
@@ -29,7 +29,7 @@ fi
 cd ${WORKDIR}
 
 
-luajit -v >/dev/null 2>&1 || { 
+luajit -v >/dev/null 2>&1 || {
     show_blue "Install" "LuaJIT from source"
     # Run
     run_install "LuaJIT-${1}:: Lua programming language with JIT compiler"
@@ -38,7 +38,7 @@ luajit -v >/dev/null 2>&1 || {
             run_download "${FILENAME}"
             wget -O ${CACHE}${FILENAME} ${DOWNLOAD_URL} &> /dev/null
         else
-            show_yellow "Cache" "found ${CACHE}LuaJIT-${1}.tar.gz. Using from cache" 
+            show_yellow "Cache" "found ${CACHE}LuaJIT-${1}.tar.gz. Using from cache"
     fi
 
     if [ ! -s "${CACHE}${FILENAME}" ] ; then
@@ -49,13 +49,13 @@ luajit -v >/dev/null 2>&1 || {
             show_blue_bg "Unpack" "LuaJIT-${1}.tar.gz"
             tar -xzf "${CACHE}${FILENAME}" -C ${CACHE}
             #mv -b ${CACHE}LuaJIT-${1}/* ${WORKDIR}
-            cd ${CACHE}LuaJIT-${1}
+            cd ${CACHE}luajit2-${1}
 
             run_compile "make"
             make install PREFIX=/usr/local
             #rm -rf ${CACHE}LuaJIT-${1}.tar.gz ${WORKDIR}LuaJIT-${1}
 
-            run_ok  
+            run_ok
     fi
 }
 show_yellow "Installed" "LuaJIT is already installed on your system"
